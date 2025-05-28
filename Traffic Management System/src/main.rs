@@ -42,7 +42,7 @@ const BTN_B_PIN: u8 = 0; // PC0
 
 const SYSCLK_HZ: u32 = 16_000_000;
 const YELLOW_TIME_MS: u32 = 2_000;
-const BASE_GREEN_TIME_MS: u32 = 10_000;
+const BASE_GREEN_TIME_MS: u32 = 5_000;
 
 struct TrafficState {
     level_a: u8,
@@ -50,8 +50,8 @@ struct TrafficState {
 }
 
 static mut TRAFFIC: TrafficState = TrafficState {
-    level_a: 3,
-    level_b: 3,
+    level_a: 0,
+    level_b: 0,
 };
 
 #[entry]
